@@ -56,6 +56,9 @@ exports.Chrono = Chrono;
 exports.strict = new Chrono( options.strictOption() );
 exports.casual = new Chrono( options.casualOption() );
 
+exports.sv = new Chrono( options.mergeOptions([
+    options.sv.casual, options.en, options.commonPostProcessing]));
+
 exports.en = new Chrono( options.mergeOptions([
     options.en.casual, options.commonPostProcessing]));
 

@@ -37,6 +37,11 @@ exports.ENMergeDateTimeRefiner = require('./en/ENMergeDateTimeRefiner').Refiner;
 exports.ENMergeDateRangeRefiner = require('./en/ENMergeDateRangeRefiner').Refiner;
 exports.ENPrioritizeSpecificDateRefiner = require('./en/ENPrioritizeSpecificDateRefiner').Refiner;
 
+// sv refiners
+exports.SVMergeDateTimeRefiner = require('./sv/SVMergeDateTimeRefiner').Refiner;
+exports.SVMergeDateRangeRefiner = require('./sv/SVMergeDateRangeRefiner').Refiner;
+exports.SVPrioritizeSpecificDateRefiner = require('./sv/SVPrioritizeSpecificDateRefiner').Refiner;
+
 // ja refiners
 exports.JPMergeDateRangeRefiner = require('./ja/JPMergeDateRangeRefiner').Refiner;
 

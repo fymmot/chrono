@@ -79,10 +79,48 @@ exports.casualOption = function () {
         exports.es.casual,
         exports.fr.casual,
         exports.ja.casual,
+        exports.sv.casual,
         exports.zh,
         exports.commonPostProcessing
     ]);
 };
+
+// -------------------------------------------------------------
+
+exports.sv = function(config) {
+    return {
+        parsers: [
+            new parser.SVDeadlineFormatParser(config),
+            new parser.SVMonthNameLittleEndianParser(config),
+            new parser.SVMonthNameParser(config),
+            new parser.SVSlashDateFormatParser(config),
+            new parser.SVTimeAgoFormatParser(config),
+            new parser.SVTimeExpressionParser(config)
+        ],
+        refiners: [
+            new refiner.OverlapRemovalRefiner(),
+            new refiner.ForwardDateRefiner(),
+
+        // Swedish
+            new refiner.SVMergeDateTimeRefiner(),
+            new refiner.SVMergeDateRangeRefiner(),
+            new refiner.SVPrioritizeSpecificDateRefiner()
+        ]
+
+    }
+};
+
+exports.sv.casual = function() {
+    var option = exports.sv({
+        strict: false
+    });
+    option.parsers.unshift(new parser.SVCasualDateParser());
+    option.parsers.unshift(new parser.SVWeekdayParser());
+    return option;
+};
+
+
+
 
 // -------------------------------------------------------------
 

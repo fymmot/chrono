@@ -53,6 +53,22 @@ function Parser(config) {
 
 exports.Parser = Parser;
 
+exports.SVISOFormatParser = require('./sv/SVISOFormatParser').Parser;
+exports.SVDeadlineFormatParser = require('./sv/SVDeadlineFormatParser').Parser;
+exports.SVRelativeDateFormatParser = require('./sv/SVRelativeDateFormatParser').Parser;
+exports.SVMonthNameLittleEndianParser = require('./sv/SVMonthNameLittleEndianParser').Parser;
+exports.SVMonthNameMiddleEndianParser = require('./sv/SVMonthNameMiddleEndianParser').Parser;
+exports.SVMonthNameParser = require('./sv/SVMonthNameParser').Parser;
+exports.SVSlashDateFormatParser = require('./sv/SVSlashDateFormatParser').Parser;
+exports.SVSlashDateFormatStartWithYearParser = require('./sv/SVSlashDateFormatStartWithYearParser').Parser;
+exports.SVSlashMonthFormatParser = require('./sv/SVSlashMonthFormatParser').Parser;
+exports.SVTimeAgoFormatParser = require('./sv/SVTimeAgoFormatParser').Parser;
+exports.SVTimeExpressionParser = require('./sv/SVTimeExpressionParser').Parser;
+exports.SVTimeLaterFormatParser = require('./sv/SVTimeLaterFormatParser').Parser;
+exports.SVWeekdayParser = require('./sv/SVWeekdayParser').Parser;
+exports.SVCasualDateParser = require('./sv/SVCasualDateParser').Parser;
+exports.SVCasualTimeParser = require('./sv/SVCasualTimeParser').Parser;
+
 exports.ENISOFormatParser = require('./en/ENISOFormatParser').Parser;
 exports.ENDeadlineFormatParser = require('./en/ENDeadlineFormatParser').Parser;
 exports.ENRelativeDateFormatParser = require('./en/ENRelativeDateFormatParser').Parser;
